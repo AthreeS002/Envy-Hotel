@@ -6,7 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Envy Hotel - Registration</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
     <!-- <link rel="stylesheet" href="css/style_login.css"> -->
     <style>
       .regis{
@@ -24,32 +42,36 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<a class="navbar-brand" href="index.php">
-					<img src="images/logo.png" alt="" />
+					<img src="images/pindah/coba/logo.png" alt="" />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="menu.php">Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="menu.php">Room</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Gallery</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="reservation.php">Reservation</a>
-								<a class="dropdown-item" href="stuff.php">Stuff</a>
 								<a class="dropdown-item" href="gallery.php">Gallery</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog.php">blog</a>
-								<a class="dropdown-item" href="blog-details.php">blog Single</a>
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+						<li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
+
+							<?php
+								if(isset($_SESSION['nin'])){
+							?>
+								<li class="nav-item active"><a class="nav-link" href="profile.php">Profile</a></li> 
+							
+							<?php } else {
+									?>
+									<li class="nav-item active"><a class="nav-link" href="login.php">Login / Register</a></li> <?php } ?>
+								
+
+
 					</ul>
 				</div>
 			</div>
@@ -58,12 +80,22 @@
 	<!-- End header -->
   
   <main>
-    
+    	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Registration</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Pages -->
   <div class="about-section-box">
 		<div class="container badan">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
-					<img src="images/about-img.jpg" alt="" class="img-fluid">
+					<img src="images/pindah/home2.jpg" alt="" class="img-fluid">
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
 					<div class="inner-column">
@@ -75,7 +107,7 @@
                     <table id="tabel-id" class="display" style="width:100%">
                         <thead>
                           <tr>
-                            <td width="120">Username</td>
+                            <td width="120" class="mb-5">Username</td>
                             <td><input type="text" name="username" required></td>
                           </tr>
 
@@ -150,6 +182,6 @@
 	  </div>
   </div>
   </main>
-
+<?php include 'footer.php'; ?>
 </body>
 </html>
