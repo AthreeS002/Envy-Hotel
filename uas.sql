@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 22, 2022 at 01:50 PM
+-- Generation Time: Dec 22, 2022 at 06:32 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -85,7 +85,7 @@ CREATE TABLE `registrasi` (
   `tanggallahir` date NOT NULL,
   `gender` varchar(10) NOT NULL,
   `alamat` varchar(255) NOT NULL,
-  `telepon` int(15) NOT NULL,
+  `telepon` int(255) NOT NULL,
   `foto` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -96,9 +96,8 @@ CREATE TABLE `registrasi` (
 
 INSERT INTO `registrasi` (`username`, `email`, `nama`, `nin`, `password`, `tanggallahir`, `gender`, `alamat`, `telepon`, `foto`, `status`) VALUES
 ('puput', 'puput@gmail.com', 'puput', 7851, 'Puput1234', '2022-11-27', 'Laki-laki', 'Solo', 8712736, 'images/foto/20215911012.png', 'Booked'),
-('ad_adlii', 'adli12@gmail.com', 'Ahmad Adli AS', 123456, 'Binatokisaki123', '2002-12-07', 'Laki-laki', 'Solo', 89657, 'images/foto/202211923533.png', 'Unbooked'),
-('haiadli', 'haiadli@gmail.com', 'adlii', 897456, 'Binatokisaki123', '2002-12-06', 'Laki-laki', 'Solo', 789454, 'images/foto/202212001646.png', 'Unbooked'),
-('akuadli', 'akuadli12@gmail.com', 'adli', 7894564, 'Binatokisaki123', '2022-11-28', 'Laki-laki', 'Klaten', 8954215, 'images/foto/202212001646.png', 'Booked');
+('ad_adli', 'adli12@gmail.com', 'Ahmad Adli AS', 123456, 'Binatokisaki123', '2002-12-07', 'Laki-laki', 'Solo', 89657, 'images/foto/202211923533.png', 'Unbooked'),
+('haiadli', 'haiadli@gmail.com', 'adlii', 897456, 'Binatokisaki123', '2002-12-06', 'Laki-laki', 'Solo', 789454, 'images/foto/202212001646.png', 'Unbooked');
 
 -- --------------------------------------------------------
 
