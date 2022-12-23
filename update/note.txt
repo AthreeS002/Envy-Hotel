@@ -2,7 +2,7 @@ Okayy, jadi disini saya menemukan beberapa bug, diantaranya sebagai berikut:
 - Cancel error
 - Status request cancel yang di decline oleh admin, akan kembali menjadi seperti semula "booking"
 - Pada page admin, user admin memiliki tombol edit dan hapus, seharusnya hanya edit saja, namun jg masih error
-- Pengunjung dapat registrasi akun meski umur masih dibawah 18 tahun
+- Pengunjung (masih) dapat melakukan registrasi akun, meski umur masih dibawah 18 tahun
 - Checkout otomatis belum bisa, harus manual.
 
 Bug akan fixed seiring nya dengan update. Pindah folder update ke direktori utama
